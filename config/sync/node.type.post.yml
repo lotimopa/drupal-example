@@ -1,0 +1,11 @@
+uuid: bfee481c-5ce8-4aa4-a727-11045dac7639
+langcode: fr
+status: true
+dependencies: {  }
+name: Post
+type: post
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true
