@@ -1,0 +1,8 @@
+lasts_posts.home:
+  path: '/home'
+  defaults:
+    _title: 'Ma page de bienvenue'
+    _controller: '\Drupal\lasts_posts\Controller\HomeController::buildPage'
+  requirements:
+    # No restricted access to home.
+    _access: 'TRUE'
