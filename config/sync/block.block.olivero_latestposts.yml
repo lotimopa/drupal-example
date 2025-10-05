@@ -1,0 +1,25 @@
+uuid: 875ce218-a060-4d14-8f20-5649d9562791
+langcode: fr
+status: true
+dependencies:
+  module:
+    - lasts_posts
+    - system
+  theme:
+    - olivero
+id: olivero_latestposts
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: lasts_posts_block
+settings:
+  id: lasts_posts_block
+  label: 'Latest Posts'
+  label_display: '0'
+  provider: lasts_posts
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

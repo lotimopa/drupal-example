@@ -63,10 +63,6 @@ fixtures: ## Creating fixtures
 
 ##
 ## —— Tests 📊 ————————————————————————————————————————————————————————————————
-tests: ## Launch tests
-	@echo "🧪 Running tests"
-	$(EXEC) php composer tests
-
 phpcs:
 	@echo "🔎 Running phpcs"
 	$(EXEC) php ./vendor/bin/phpcs --standard=vendor/drupal/coder/coder_sniffer/Drupal/ruleset.xml --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml web/modules/custom/* --ignore=*/tests/*,web/modules/custom/*.info.yml

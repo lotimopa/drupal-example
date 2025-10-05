@@ -1,0 +1,5 @@
+name: Lasts Posts
+description: Display last posts.
+package: Custom
+type: module
+core_version_requirement: ^11
