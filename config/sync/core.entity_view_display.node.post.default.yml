@@ -1,0 +1,29 @@
+uuid: 20ab9d6f-17e2-409e-83db-86151ab2e0e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.post.field_body
+    - node.type.post
+  module:
+    - text
+    - user
+id: node.post.default
+targetEntityType: node
+bundle: post
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: 54e071de-81fc-49ba-8faf-8f55eacbb511
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.ckeditor
+    - node.type.post
+  module:
+    - text
+id: node.post.field_body
+field_name: field_body
+entity_type: node
+bundle: post
+label: Corps
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - ckeditor
+field_type: text_long

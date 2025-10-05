@@ -1,0 +1,8 @@
+uuid: 4f547f5e-f7a2-4e33-ac6c-85548b5c6e11
+langcode: fr
+status: true
+dependencies: {  }
+name: Ckeditor
+format: ckeditor
+weight: 0
+filters: {  }

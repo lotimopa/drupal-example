@@ -2,7 +2,10 @@ uuid: d7bf7890-7c2c-4414-ba0d-b142779ee7e6
 langcode: fr
 status: true
 dependencies:
+  config:
+    - filter.format.ckeditor
   module:
+    - filter
     - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -12,3 +15,4 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'use text format ckeditor'
