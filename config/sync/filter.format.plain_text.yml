@@ -1,0 +1,29 @@
+uuid: 152a3e87-d1ed-4ac7-89fa-94f39598960e
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JLMwODO0epnA_H-jFlH9ezVfa5YBJniRv3MmLqYNl_Q
+name: 'Texte brut'
+format: plain_text
+weight: 10
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: true
+    weight: -10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72

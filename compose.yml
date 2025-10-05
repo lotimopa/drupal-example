@@ -1,0 +1,61 @@
+services:
+  # PHP
+  php:
+    image: drupal_php:8.4
+    container_name: php
+    build:
+      context: ./.docker/php/
+      args:
+        - APP_USER_ID=${APP_USER_ID}
+        - APP_GROUP_ID=${APP_GROUP_ID}
+    restart: always
+    environment:
+      DATABASE_HOST: mysql
+    volumes:
+      - ./:/project:delegated
+    user: ${APP_USER_ID}:${APP_GROUP_ID}
+    depends_on:
+      - mysql
+      - mailpit
+    env_file:
+      - .env
+
+  # Apache
+  httpd:
+    image: starter_httpd:2.4
+    container_name: httpd
+    build: .docker/httpd
+    volumes:
+      - ./:/project:delegated
+    depends_on:
+      - php
+
+  # MySQL
+  mysql:
+    image: mariadb:11.0
+    container_name: mysql
+    restart: always
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
+      - "MYSQL_USER=drupal"
+      - "MYSQL_PASSWORD=drupal"
+      - "MYSQL_DATABASE=drupal"
+    volumes:
+      - db:/var/lib/mysql
+
+  # Mailpit
+  mailpit:
+    image: axllent/mailpit
+    volumes:
+      - mailpit:/data
+    environment:
+      MP_MAX_MESSAGES: 5000
+      MP_DATABASE: /data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+    container_name: mailpit
+
+# Volumes
+volumes:
+  db:
+  mailpit:
