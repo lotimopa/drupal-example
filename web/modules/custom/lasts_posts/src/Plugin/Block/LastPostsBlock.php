@@ -85,15 +85,18 @@ class LastPostsBlock extends BlockBase implements ContainerFactoryPluginInterfac
       'type' => 'post',
     ]);
 
-    $build = [];
+    $renderedPosts = [];
     foreach ($posts as $post) {
       if (!$post->access(operation: 'view', account: $this->currentUser)) {
         continue;
       }
-      $build[] = $viewBuilder->view($post);
+      $renderedPosts[] = $viewBuilder->view($post);
     }
 
-    return $build;
+    return [
+      '#theme' => 'lasts_posts',
+      '#posts' => $renderedPosts,
+    ];
   }
 
   /**
