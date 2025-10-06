@@ -25,18 +25,18 @@ jobs:
           OUTPUT: CHANGELOG.md
           GITHUB_REPO: ${{ github.repository }}
 
-    build:
-      name: Build and Release
-      needs: generate-changelog
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+  build:
+    name: Build and Release
+    needs: generate-changelog
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        # GitHub Release creation with assets
-        - name: Create GitHub Release
-          uses: softprops/action-gh-release@v1
-          with:
-            tag_name: ${{ github.ref }}
-            name: "Release ${{ github.ref }}"
-            body: ${{ needs.generate-changelog.outputs.release_body }}
+      # GitHub Release creation with assets
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.ref }}
+          name: "Release ${{ github.ref }}"
+          body: ${{ needs.generate-changelog.outputs.release_body }}
