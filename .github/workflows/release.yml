@@ -40,3 +40,5 @@ jobs:
           tag_name: ${{ github.ref }}
           name: "Release ${{ github.ref }}"
           body: ${{ needs.generate-changelog.outputs.release_body }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
