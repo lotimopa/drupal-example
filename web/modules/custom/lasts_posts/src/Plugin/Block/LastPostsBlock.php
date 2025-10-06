@@ -26,14 +26,14 @@ class LastPostsBlock extends BlockBase implements ContainerFactoryPluginInterfac
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
-  protected $entityTypeManager;
+  protected readonly EntityTypeManagerInterface $entityTypeManager;
 
   /**
    * The current user.
    *
    * @var \Drupal\Core\Session\AccountInterface
    */
-  protected $currentUser;
+  protected readonly AccountInterface $currentUser;
 
   /**
    * Creates a LocalActionsBlock instance.
@@ -81,9 +81,14 @@ class LastPostsBlock extends BlockBase implements ContainerFactoryPluginInterfac
     $storage = $this->entityTypeManager->getStorage('node');
     $viewBuilder = $this->entityTypeManager->getViewBuilder('node');
 
-    $posts = $storage->loadByProperties([
-      'type' => 'post',
-    ]);
+    $posts = $storage
+      ->getQuery()
+      ->condition('type', 'post')
+      ->sort('nid', 'DESC')
+      ->accessCheck(FALSE)
+      ->execute();
+
+    $posts = $storage->loadMultiple($posts);
 
     $renderedPosts = [];
     foreach ($posts as $post) {
