@@ -20,13 +20,16 @@ module:
   mysql: 0
   node: 0
   page_cache: 0
+  path: 0
   path_alias: 0
   symfony_mailer: 0
   system: 0
   text: 0
+  token: 0
   toolbar: 0
   update: 0
   user: 0
+  pathauto: 1
   views: 10
   minimal: 1000
 theme:
