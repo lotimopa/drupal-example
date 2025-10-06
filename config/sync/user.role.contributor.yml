@@ -1,0 +1,28 @@
+uuid: 03304995-0f20-4958-9c3e-f5668a1d93a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.post
+  module:
+    - node
+    - system
+    - toolbar
+id: contributor
+label: Contributeur
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create post content'
+  - 'delete any post content'
+  - 'delete own post content'
+  - 'delete post revisions'
+  - 'edit any post content'
+  - 'edit own post content'
+  - 'revert post revisions'
+  - 'view own unpublished content'
+  - 'view post revisions'
+  - 'view the administration theme'
