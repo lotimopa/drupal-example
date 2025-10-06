@@ -90,7 +90,10 @@ class LastPostsBlock extends BlockBase implements ContainerFactoryPluginInterfac
       if (!$post->access(operation: 'view', account: $this->currentUser)) {
         continue;
       }
-      $renderedPosts[] = $viewBuilder->view($post);
+      $renderedPosts[] = $viewBuilder->view(
+        entity: $post,
+        view_mode: 'teaser',
+      );
     }
 
     return [

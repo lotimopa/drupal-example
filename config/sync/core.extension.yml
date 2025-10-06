@@ -15,6 +15,7 @@ module:
   language: 0
   lasts_posts: 0
   locale: 0
+  login_history: 0
   mailer_transport: 0
   mysql: 0
   node: 0
@@ -26,6 +27,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views: 10
   minimal: 1000
 theme:
   claro: 0

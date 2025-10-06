@@ -21,6 +21,7 @@
         "drupal/core-project-message": "^11.2",
         "drupal/core-recipe-unpack": "^11.2",
         "drupal/core-recommended": "^11.2",
+        "drupal/login_history": "^2.0",
         "drupal/symfony_mailer": "^1.6",
         "drush/drush": "^13.6"
     },
