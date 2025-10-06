@@ -27,4 +27,5 @@ class ThemeHooks {
 
     return $themes;
   }
+
 }

@@ -15,10 +15,12 @@ module:
   language: 0
   lasts_posts: 0
   locale: 0
+  mailer_transport: 0
   mysql: 0
   node: 0
   page_cache: 0
   path_alias: 0
+  symfony_mailer: 0
   system: 0
   text: 0
   toolbar: 0

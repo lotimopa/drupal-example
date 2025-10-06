@@ -1,0 +1,18 @@
+uuid: cdabce51-e02e-4bd6-867d-b64bcc45bcf8
+langcode: fr
+status: true
+dependencies: {  }
+id: smtp
+label: SMTP
+plugin: smtp
+configuration:
+  user: ''
+  pass: ''
+  host: mailpit
+  port: 1025
+  query:
+    verify_peer: false
+    local_domain: ''
+    restart_threshold: null
+    restart_threshold_sleep: null
+    ping_threshold: null
