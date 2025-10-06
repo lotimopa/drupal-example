@@ -3,8 +3,11 @@ langcode: fr
 status: true
 dependencies:
   config:
+    - filter.format.ckeditor
+    - node.type.page
     - node.type.post
   module:
+    - filter
     - node
     - system
     - toolbar
@@ -16,13 +19,22 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access toolbar'
+  - 'create page content'
   - 'create post content'
+  - 'delete any page content'
   - 'delete any post content'
+  - 'delete own page content'
   - 'delete own post content'
+  - 'delete page revisions'
   - 'delete post revisions'
+  - 'edit any page content'
   - 'edit any post content'
+  - 'edit own page content'
   - 'edit own post content'
+  - 'revert page revisions'
   - 'revert post revisions'
+  - 'use text format ckeditor'
   - 'view own unpublished content'
+  - 'view page revisions'
   - 'view post revisions'
   - 'view the administration theme'
