@@ -17,8 +17,7 @@ class HomeController extends ControllerBase {
    */
   public function buildPage(): array {
     return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Welcome'),
+      '#theme' => 'homepage',
     ];
   }
 

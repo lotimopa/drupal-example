@@ -10,7 +10,7 @@ use Drupal\Core\Hook\Attribute\Hook;
 class ThemeHooks {
 
   /**
-   * Hoo, theme method.
+   * Hook theme method.
    *
    * @return array
    *   Themes list.
@@ -23,6 +23,10 @@ class ThemeHooks {
       'variables' => [
         'posts' => NULL,
       ],
+    ];
+
+    $themes['homepage'] = [
+      'variables' => [],
     ];
 
     return $themes;
