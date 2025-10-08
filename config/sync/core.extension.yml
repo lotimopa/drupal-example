@@ -19,6 +19,7 @@ module:
   mailer_transport: 0
   mysql: 0
   node: 0
+  olivero_dark_switch: 0
   page_cache: 0
   path: 0
   path_alias: 0
@@ -35,4 +36,5 @@ module:
 theme:
   claro: 0
   olivero: 0
+  stable9: 0
 profile: minimal

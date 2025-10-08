@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5491676bfb291d727e5959ca5b6895a",
+    "content-hash": "b1a26d26ddb7b67c78cc3315f215d126",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1749,6 +1749,57 @@
             "homepage": "https://www.drupal.org/project/symfony_mailer",
             "support": {
                 "source": "https://git.drupalcode.org/project/symfony_mailer"
+            }
+        },
+        {
+            "name": "drupal/olivero_dark_switch",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/olivero_dark_switch.git",
+                "reference": "1.0.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/olivero_dark_switch-1.0.0-alpha1.zip",
+                "reference": "1.0.0-alpha1",
+                "shasum": "42230387a1a001064231e87c6a1cc39b048a2060"
+            },
+            "require": {
+                "drupal/core": "^10.4 || ^11.1",
+                "php": "^8.1"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-alpha1",
+                    "datestamp": "1759881942",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Lacey-Anne Sanderson",
+                    "homepage": "https://github.com/laceysanderson/",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Drupal extension module which provides dark theme for Olivero and a toggle to change it.",
+            "homepage": "https://www.drupal.org/project/olivero_dark_switch",
+            "keywords": [
+                "Drupal",
+                "Olivero"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/olivero_dark_switch",
+                "issues": "https://www.drupal.org/project/issues/olivero_dark_switch"
             }
         },
         {
@@ -12637,7 +12688,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "drupal/olivero_dark_switch": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},
